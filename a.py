@@ -161,7 +161,9 @@ def main():
     criar_tabelas()
 
     # Capturar token da URL
-    query_params = st.query_params
+    # query_params = st.query_params
+    query_params = st.experimental_get_query_params()
+
     token_url = query_params.get('token', None)
 
     # Carregar as configurações de gráficos
